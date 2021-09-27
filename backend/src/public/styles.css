@@ -1,0 +1,35 @@
+body{
+    background-color: #000237;
+}
+
+.create-time{
+    margin-top:1em; 
+    margin-bottom: auto;
+    margin-left: 4em;
+    margin-right: 4em;
+    color: white;
+}
+
+#create{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#ct{
+    display: flex;
+    justify-content: flex-start;
+}
+.tasklist{
+    margin-top:1em; 
+    margin-right:3%; 
+    margin-left:3%; 
+    margin-bottom: 1%; 
+    background-color: #2B5480;
+    border-radius: 8px;
+    scroll-padding-bottom: 500px;
+}
+
+.ci {
+    padding-top: 2.5em;
+    padding-right: 4em;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+
+<header>
+  <%- include ('partials/head')  %>
+  <%- include ('partials/navbar')  %>
+</header>
+
+<body>
+  <div class="create-time">
+    <span id='ct'></span>
+    <a href="/addTask">
+      <button id='create' class="btn btn-primary"><i class="bi bi-plus-lg"></i></button>
+    </a>
+  </div>
+  <div class="tasklist album py-5">
+    <div class="container">
+      <div class="row">
+        <% data.forEach(function(data) { %>
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <div class="card-body">
+                <h4><%= data.title %></h2>
+                <p class="card-text"><%= data.description %></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/deleteTask/<%= data.id %>">
+                      <button type="button" class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                    </a>
+                    <a href="/editTask/<%= data.id %>">
+                      <button type="button" class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil-square"></i></button>
+                    </a>
+                  </div>
+                  <small class="text-muted pl-2"><%= data.subtitle %></small>
+                </div>
+              </div>
+            </div>
+          </div>
+      <% }); %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

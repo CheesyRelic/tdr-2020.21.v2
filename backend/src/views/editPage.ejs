@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+
+<header>
+  <%- include ('partials/head')  %>
+  <%- include ('partials/navbar')  %>
+</header>
+
+<body>
+    <div class="create-time">
+        <span id='ct' ></span>
+        <a href="/allTasks">
+            <button id='create' class="btn btn-primary"><i class="bi bi-arrow-left"></i></button>
+        </a>
+    </div>
+
+    <form action="/updateTask/<%= data.id %>" method="POST">
+        <div class="tasklist album py-5">
+            <div class="container">
+                <div class="mb-3 form-group">
+                    <label class="form-label">Títol</label>
+                    <input type="text" class="form-control" name="title" value="<%= data.title%>"  placeholder="El títol">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Data limit</label>
+                    <input type="date" class="form-control" name="subtitle" value="<%= data.subtitle %>"  placeholder="La data limit">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Descripció</label>
+                    <textarea type="text" class="form-control" name="description" value="<%= data.description %>" placeholder="Una breu descripció" rows="3"></textarea>
+                  </div>
+            </div>
+          </div>
+        <div class="ci" style='float: right;'>
+            <button id='create' class="btn btn-primary"><i class="bi bi-telegram"></i></button>
+        </div>
+    </form>
+</body>
+</html>
