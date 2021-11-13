@@ -2,9 +2,9 @@ const { createPool } = require('mysql')
 
 const pool = createPool({
     host: 'localhost',
-    user: 'tdr-aa',
-    password: 'dgKeSd4E',
-    database: 'tdr-aa'
+    user: 'root',
+    password: '',
+    database: 'tdr-2020-21'
 })
 
 pool.getConnection((err) => {

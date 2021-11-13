@@ -19,10 +19,10 @@ router.get('/allTasks',  async (req, res) => {
 })
 
 router.post('/addTask', async (req, res) => {
-    const { title, subtitle, description } = req.body
+    const { title, time, description } = req.body
     const data = {
         title,
-        subtitle, 
+        time, 
         description
     }
     await pool.query('INSERT INTO tasks set ?', (data), (err) => {

@@ -15,7 +15,7 @@ app.set('view engine', 'ejs')
 app.set('port', 5000 || process.env.PORT)
 
 app.use(session({
-  secret: '25asd2gg2',
+  secret: '12313154235',
   resave: false,
   saveUninitialized: true
 }))
